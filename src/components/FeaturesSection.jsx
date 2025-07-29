@@ -1,4 +1,4 @@
-// src/components/FeaturesSection.jsx (Updated)
+// src/components/FeaturesSection.jsx (Updated with Hover Effects)
 import React from 'react';
 import { Box, Container, Grid, Card, CardContent, Typography } from '@mui/material';
 import PeopleIcon from '@mui/icons-material/People';
@@ -25,15 +25,28 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <Box id="features" sx={{ py: 8, bgcolor: '#f5f5f5' }}>
+    <Box id="features" sx={{ py: 10, bgcolor: '#f5f5f5' }}>
       <Container maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
           Everything You Need in a Simple CRM
         </Typography>
-        <Grid container spacing={4} sx={{ mt: 4 }}>
+        <Typography variant="h6" align="center" color="text.secondary" sx={{ mb: 8 }}>
+          Focus on selling, not on complicated software.
+        </Typography>
+        <Grid container spacing={4}>
           {features.map((feature) => (
             <Grid item xs={12} md={4} key={feature.title}>
-              <Card sx={{ textAlign: 'center', p: 3, height: '100%' }}>
+              <Card sx={{
+                textAlign: 'center',
+                p: 3,
+                height: '100%',
+                borderRadius: '12px',
+                transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-10px)',
+                  boxShadow: 6,
+                },
+              }}>
                 {feature.icon}
                 <CardContent>
                   <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
