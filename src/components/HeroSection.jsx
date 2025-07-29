@@ -1,10 +1,9 @@
-// src/components/HeroSection.jsx (Updated)
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 
 const HeroSection = () => {
   // IMPORTANT: Replace this with the URL of your deployed CRM frontend on Netlify
-  const crmAppUrl = https://uppalcrm.netlify.app/login';
+  const crmAppUrl = 'https://uppalcrm.netlify.app/';
 
   return (
     <Box id="hero" sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
